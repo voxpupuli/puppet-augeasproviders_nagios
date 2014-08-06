@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/hercules-team/augeasproviders_nagios.svg?branch=master)](https://travis-ci.org/hercules-team/augeasproviders_nagios)
+[![Coverage Status](https://img.shields.io/coveralls/hercules-team/augeasproviders_nagios.svg)](https://coveralls.io/r/hercules-team/augeasproviders_nagios)
+
+
 # nagios: type/provider for nagios files for Puppet
 
 This module provides a new type/provider for Puppet to read and modify nagios

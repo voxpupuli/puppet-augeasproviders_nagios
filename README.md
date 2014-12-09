@@ -1,3 +1,4 @@
+[![Puppet Forge](http://img.shields.io/puppetforge/v/herculesteam/augeasproviders_nagios.svg)](https://forge.puppetlabs.com/herculesteam/augeasproviders_nagios)
 [![Build Status](https://travis-ci.org/hercules-team/augeasproviders_nagios.svg?branch=master)](https://travis-ci.org/hercules-team/augeasproviders_nagios)
 [![Coverage Status](https://img.shields.io/coveralls/hercules-team/augeasproviders_nagios.svg)](https://coveralls.io/r/hercules-team/augeasproviders_nagios)
 

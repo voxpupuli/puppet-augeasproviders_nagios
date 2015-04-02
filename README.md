@@ -1,6 +1,9 @@
-[![Puppet Forge](http://img.shields.io/puppetforge/v/herculesteam/augeasproviders_nagios.svg)](https://forge.puppetlabs.com/herculesteam/augeasproviders_nagios)
-[![Build Status](https://travis-ci.org/hercules-team/augeasproviders_nagios.svg?branch=master)](https://travis-ci.org/hercules-team/augeasproviders_nagios)
+[![Puppet Forge Version](http://img.shields.io/puppetforge/v/herculesteam/augeasproviders_nagios.svg)](https://forge.puppetlabs.com/herculesteam/augeasproviders_nagios)
+[![Puppet Forge Downloads](http://img.shields.io/puppetforge/dt/herculesteam/augeasproviders_nagios.svg)](https://forge.puppetlabs.com/herculesteam/augeasproviders_nagios)
+[![Puppet Forge Endorsement](https://img.shields.io/puppetforge/e/herculesteam/augeasproviders_nagios.svg)](https://forge.puppetlabs.com/herculesteam/augeasproviders_nagios)
+[![Build Status](https://img.shields.io/travis/hercules-team/augeasproviders_nagios/master.svg)](https://travis-ci.org/hercules-team/augeasproviders_nagios)
 [![Coverage Status](https://img.shields.io/coveralls/hercules-team/augeasproviders_nagios.svg)](https://coveralls.io/r/hercules-team/augeasproviders_nagios)
+[![Gemnasium](https://img.shields.io/gemnasium/hercules-team/augeasproviders_nagios.svg)](https://gemnasium.com/hercules-team/augeasproviders_nagios)
 
 
 # nagios: type/provider for nagios files for Puppet

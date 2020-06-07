@@ -3,6 +3,7 @@
 [![Puppet Forge Endorsement](https://img.shields.io/puppetforge/e/herculesteam/augeasproviders_nagios.svg)](https://forge.puppetlabs.com/herculesteam/augeasproviders_nagios)
 [![Build Status](https://img.shields.io/travis/hercules-team/augeasproviders_nagios/master.svg)](https://travis-ci.org/hercules-team/augeasproviders_nagios)
 [![Coverage Status](https://img.shields.io/coveralls/hercules-team/augeasproviders_nagios.svg)](https://coveralls.io/r/hercules-team/augeasproviders_nagios)
+[![Sponsor](https://img.shields.io/badge/%E2%99%A5-Sponsor-hotpink.svg)](https://github.com/sponsors/raphink)
 
 
 # nagios: type/provider for nagios files for Puppet

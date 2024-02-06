@@ -4,17 +4,17 @@
 # Licensed under the Apache License, Version 2.0
 
 Puppet::Type.newtype(:nrpe_command) do
-  @doc = "Manages commands in /etc/nagios/nrpe.cfg."
+  @doc = 'Manages commands in /etc/nagios/nrpe.cfg.'
 
   ensurable
 
   newparam(:name) do
-    desc "The name of the command, e.g. check_my_stuff"
+    desc 'The name of the command, e.g. check_my_stuff'
     isnamevar
   end
 
   newproperty(:command) do
-    desc "Check command to run on the system, with arguments"
+    desc 'Check command to run on the system, with arguments'
   end
 
   newparam(:target) do

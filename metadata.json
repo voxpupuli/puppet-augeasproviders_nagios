@@ -1,6 +1,6 @@
 {
   "name": "puppet-augeasproviders_nagios",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "author": "Vox Pupuli",
   "summary": "Augeas-based nagios types and providers for Puppet",
   "license": "Apache-2.0",

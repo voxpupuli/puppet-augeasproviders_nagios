@@ -1,12 +1,12 @@
 {
-  "name": "herculesteam-augeasproviders_nagios",
+  "name": "puppet-augeasproviders_nagios",
   "version": "2.1.1",
-  "author": "Raphael Pinson",
+  "author": "Vox Pupuli",
   "summary": "Augeas-based nagios types and providers for Puppet",
   "license": "Apache-2.0",
-  "source": "https://github.com/hercules-team/augeasproviders_nagios",
-  "project_page": "https://github.com/hercules-team/augeasproviders_nagios",
-  "issues_url": "https://github.com/hercules-team/augeasproviders_nagios/issues",
+  "source": "https://github.com/puppet/augeasproviders_nagios",
+  "project_page": "https://github.com/puppet/augeasproviders_nagios",
+  "issues_url": "https://github.com/puppet/augeasproviders_nagios/issues",
   "description": "This module provides types/providers for nagios using the Augeas configuration API library.",
   "dependencies": [
     {

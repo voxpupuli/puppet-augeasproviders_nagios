@@ -1,12 +1,12 @@
-[![Puppet Forge Version](http://img.shields.io/puppetforge/v/herculesteam/augeasproviders_nagios.svg)](https://forge.puppetlabs.com/herculesteam/augeasproviders_nagios)
-[![Puppet Forge Downloads](http://img.shields.io/puppetforge/dt/herculesteam/augeasproviders_nagios.svg)](https://forge.puppetlabs.com/herculesteam/augeasproviders_nagios)
-[![Puppet Forge Endorsement](https://img.shields.io/puppetforge/e/herculesteam/augeasproviders_nagios.svg)](https://forge.puppetlabs.com/herculesteam/augeasproviders_nagios)
-[![Build Status](https://img.shields.io/travis/hercules-team/augeasproviders_nagios/master.svg)](https://travis-ci.org/hercules-team/augeasproviders_nagios)
-[![Coverage Status](https://img.shields.io/coveralls/hercules-team/augeasproviders_nagios.svg)](https://coveralls.io/r/hercules-team/augeasproviders_nagios)
-[![Sponsor](https://img.shields.io/badge/%E2%99%A5-Sponsor-hotpink.svg)](https://github.com/sponsors/raphink)
-
-
 # nagios: type/provider for nagios files for Puppet
+
+[![License](https://img.shields.io/github/license/voxpupuli/puppet-augeasproviders_nagios.svg)](https://github.com/voxpupuli/puppet-augeasproviders_nagios/blob/master/LICENSE)
+[![Puppet Forge Version](http://img.shields.io/puppetforge/v/puppet/augeasproviders_nagios.svg)](https://forge.puppetlabs.com/puppet/augeasproviders_nagios)
+[![Puppet Forge Downloads](http://img.shields.io/puppetforge/dt/puppet/augeasproviders_nagios.svg)](https://forge.puppetlabs.com/puppet/augeasproviders_nagios)
+[![Build Status](https://github.com/voxpupuli/puppet-augeasproviders_nagios/workflows/CI/badge.svg)](https://github.com/voxpupuli/puppet-augeasproviders_nagios/actions?query=workflow%3ACI)
+[![Donated by Herculesteam](https://img.shields.io/badge/donated%20by-herculesteam-fb7047.svg)](#transfer-notice)
+
+# Features
 
 This module provides a new type/provider for Puppet to read and modify nagios
 config files using the Augeas configuration library.
@@ -57,7 +57,7 @@ nrpe\_command             | **yes** | **yes** | **yes** | **yes** |
 ## Documentation and examples
 
 Type documentation can be generated with `puppet doc -r type` or viewed on the
-[Puppet Forge page](http://forge.puppetlabs.com/herculesteam/augeasproviders_nagios).
+[Puppet Forge page](http://forge.puppetlabs.com/voxpupuli/augeasproviders_nagios).
 
 
 ### manage entry
@@ -73,7 +73,37 @@ Type documentation can be generated with `puppet doc -r type` or viewed on the
       ensure => absent,
     }
 
-
 ## Issues
 
-Please file any issues or suggestions [on GitHub](https://github.com/hercules-team/augeasproviders_syslog/issues).
+Please file any issues or suggestions [on GitHub](https://github.com/voxpupuli/augeasproviders_nagios/issues).
+
+## Supported OS
+
+See [metadata.json](metadata.json) for supported OS versions.
+
+## Dependencies
+
+See [metadata.json](metadata.json) for dependencies.
+
+## Puppet
+
+The supported Puppet versions are listed in the [metadata.json](metadata.json)
+
+## REFERENCES
+
+Please see [REFERENCE.md](https://github.com/voxpupuli/puppet-augeasproviders_nagios/blob/master/REFERENCE.md) for more details.
+
+## Contributing
+
+Please report bugs and feature request using [GitHub issue
+tracker](https://github.com/voxpupuli/puppet-augeasproviders_nagios/issues).
+
+For pull requests, it is very much appreciated to check your Puppet manifest
+with [puppet-lint](https://github.com/puppetlabs/puppet-lint/) to follow the recommended Puppet style guidelines from the
+[Puppet Labs style guide](https://www.puppet.com/docs/puppet/latest/style_guide.html).
+
+## Transfer Notice
+
+This plugin was originally authored by [Hercules Team](https://github.com/hercules-team).
+The maintainer preferred that Puppet Community take ownership of the module for future improvement and maintenance.
+Existing pull requests and issues were transferred over, please fork and continue to contribute here instead of Hercules Team.

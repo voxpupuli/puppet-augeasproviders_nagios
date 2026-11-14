@@ -90,6 +90,52 @@ describe provider_class do
     end
   end
 
+  context 'with duplicate entries' do
+    let(:tmptarget) { aug_fixture('duplicate') }
+    let(:target) { tmptarget.path }
+
+    it 'updates value and removes duplicates' do
+      apply!(Puppet::Type.type(:nrpe_command).new(
+               name: 'check_total_procs',
+               command: '/usr/lib/nagios/plugins/check_procs -w 400 -c 500',
+               target: target,
+               provider: 'augeas',
+             ))
+
+      augparse_filter(target, 'Nrpe.lns', 'command[check_total_procs]', '
+        { "command"
+          { "check_total_procs" = "/usr/lib/nagios/plugins/check_procs -w 400 -c 500" }
+        }
+      ')
+    end
+
+    it 'removes duplicates with the same value' do
+      apply!(Puppet::Type.type(:nrpe_command).new(
+               name: 'check_users',
+               command: '/usr/lib/nagios/plugins/check_users -w 5 -c 10',
+               target: target,
+               provider: 'augeas',
+             ))
+
+      augparse_filter(target, 'Nrpe.lns', 'command[check_users]', '
+        { "command"
+          { "check_users" = "/usr/lib/nagios/plugins/check_users -w 5 -c 10" }
+        }
+      ')
+    end
+
+    it 'deletes all duplicates' do
+      apply!(Puppet::Type.type(:nrpe_command).new(
+               name: 'check_users',
+               ensure: 'absent',
+               target: target,
+               provider: 'augeas',
+             ))
+
+      expect(File.read(target)).not_to include('check_users')
+    end
+  end
+
   context 'with broken file' do
     let(:tmptarget) { aug_fixture('broken') }
     let(:target) { tmptarget.path }

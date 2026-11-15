@@ -40,4 +40,10 @@ Puppet::Type.type(:nrpe_command).provide(:augeas, parent: Puppet::Type.type(:aug
   end
 
   attr_aug_accessor(:command, label: :resource)
+
+  define_aug_method!(:command=) do |aug, resource, value|
+    # Remove duplicate definitions, keeping the first
+    aug.rm("$target/command[#{resource[:name]}][position() != 1]")
+    attr_aug_writer_command(aug, value)
+  end
 end

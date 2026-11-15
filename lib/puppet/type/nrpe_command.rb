@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Manages command entries in nrpe.cfg
 #
 # Copyright (c) 2012 Christian Kaenzig

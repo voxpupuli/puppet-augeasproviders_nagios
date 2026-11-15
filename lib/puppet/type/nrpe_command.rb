@@ -11,6 +11,11 @@ Puppet::Type.newtype(:nrpe_command) do
   newparam(:name) do
     desc 'The name of the command, e.g. check_my_stuff'
     isnamevar
+
+    validate do |value|
+      # Characters rejected by the Nrpe lens or that break Augeas path expressions
+      raise ArgumentError, "Invalid command name '#{value}': must not contain any of []()/\\=,!| or newlines" if value =~ %r{[\[\]()/\\=,!|\n]}
+    end
   end
 
   newproperty(:command) do

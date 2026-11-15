@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 provider_class = Puppet::Type.type(:nrpe_command).provider(:augeas)
@@ -37,13 +39,13 @@ describe provider_class do
         }
       end
 
-      inst.size.should == 6
-      inst[0].should == { name: 'check_users', ensure: :present, command: '/usr/lib/nagios/plugins/check_users -w 5 -c 10' }
-      inst[1].should == { name: 'check_load', ensure: :present, command: '/usr/lib/nagios/plugins/check_load -w 15,10,5 -c 30,25,20' }
-      inst[2].should == { name: 'check_hda1', ensure: :present, command: '/usr/lib/nagios/plugins/check_disk -w 20% -c 10% -p /dev/hda1' }
-      inst[3].should == { name: 'check_zombie_procs', ensure: :present, command: '/usr/lib/nagios/plugins/check_procs -w 5 -c 10 -s Z' }
-      inst[4].should == { name: 'check_total_procs', ensure: :present, command: '/usr/lib/nagios/plugins/check_procs -w 150 -c 200 ' }
-      inst[5].should == { name: 'check_test', ensure: :present, command: '/usr/lib/nagios/plugins/check_http -I 127.0.0.1 -p 8080 -u /ubrowse.action?acro=SCGC-ENS' }
+      expect(inst.size).to eq(6)
+      expect(inst[0]).to eq({ name: 'check_users', ensure: :present, command: '/usr/lib/nagios/plugins/check_users -w 5 -c 10' })
+      expect(inst[1]).to eq({ name: 'check_load', ensure: :present, command: '/usr/lib/nagios/plugins/check_load -w 15,10,5 -c 30,25,20' })
+      expect(inst[2]).to eq({ name: 'check_hda1', ensure: :present, command: '/usr/lib/nagios/plugins/check_disk -w 20% -c 10% -p /dev/hda1' })
+      expect(inst[3]).to eq({ name: 'check_zombie_procs', ensure: :present, command: '/usr/lib/nagios/plugins/check_procs -w 5 -c 10 -s Z' })
+      expect(inst[4]).to eq({ name: 'check_total_procs', ensure: :present, command: '/usr/lib/nagios/plugins/check_procs -w 150 -c 200 ' })
+      expect(inst[5]).to eq({ name: 'check_test', ensure: :present, command: '/usr/lib/nagios/plugins/check_http -I 127.0.0.1 -p 8080 -u /ubrowse.action?acro=SCGC-ENS' })
     end
 
     it 'deletes entries' do
@@ -55,7 +57,7 @@ describe provider_class do
              ))
 
       aug_open(target, 'Nrpe.lns') do |aug|
-        aug.match('command/check_test').size.should == 0
+        expect(aug.match('command/check_test')).to be_empty
       end
     end
 
@@ -102,9 +104,9 @@ describe provider_class do
                     provider: 'augeas',
                   ))
 
-      txn.any_failed?.should_not.nil?
-      @logs.first.level.should == :err
-      @logs.first.message.include?(target).should == true
+      expect(txn).to be_any_failed
+      expect(@logs.first.level).to eq(:err)
+      expect(@logs.first.message).to include(target)
     end
   end
 end

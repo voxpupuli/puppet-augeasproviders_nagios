@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Alternative Augeas-based provider for nrpe type
 #
 # Copyright (c) 2012 Christian Kaenzig

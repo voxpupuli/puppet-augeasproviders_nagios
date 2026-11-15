@@ -1,4 +1,4 @@
-# nagios: type/provider for nagios files for Puppet
+# nagios: types/providers for Nagios-related files for Puppet
 
 [![License](https://img.shields.io/github/license/voxpupuli/puppet-augeasproviders_nagios.svg)](https://github.com/voxpupuli/puppet-augeasproviders_nagios/blob/master/LICENSE)
 [![Puppet Forge Version](http://img.shields.io/puppetforge/v/puppet/augeasproviders_nagios.svg)](https://forge.puppetlabs.com/puppet/augeasproviders_nagios)
@@ -8,8 +8,11 @@
 
 # Features
 
-This module provides a new type/provider for Puppet to read and modify nagios
-config files using the Augeas configuration library.
+This module provides types/providers for Puppet to read and modify
+Nagios-related config files using the Augeas configuration library.
+
+Currently it provides the `nrpe_command` type, which manages command
+definitions in the NRPE daemon config (`/etc/nagios/nrpe.cfg` by default).
 
 The advantage of using Augeas over the default Puppet `parsedfile`
 implementations is that Augeas will go to great lengths to preserve file

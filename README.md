@@ -20,44 +20,17 @@ know anything about Augeas to make use of it.
 
 ## Requirements
 
-Ensure both Augeas and ruby-augeas 0.3.0+ bindings are installed and working as
-normal.
-
-See [Puppet/Augeas pre-requisites](http://docs.puppetlabs.com/guides/augeas.html#pre-requisites).
+Augeas and the ruby-augeas bindings are required. Both are bundled in the
+OpenVox and Puppet agent packages.
 
 ## Installing
 
-On Puppet 2.7.14+, the module can be installed easily ([documentation](http://docs.puppetlabs.com/puppet/latest/reference/modules_installing.html)):
-
-    puppet module install herculesteam/augeasproviders_nagios
-
-You may see an error similar to this on Puppet 2.x ([#13858](http://projects.puppetlabs.com/issues/13858)):
-
-    Error 400 on SERVER: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type `nrpe_command` at ...
-
-Ensure the module is present in your puppetmaster's own environment (it doesn't
-have to use it) and that the master has pluginsync enabled.  Run the agent on
-the puppetmaster to cause the custom types to be synced to its local libdir
-(`puppet master --configprint libdir`) and then restart the puppetmaster so it
-loads them.
-
-## Compatibility
-
-### Puppet versions
-
-Minimum of Puppet 2.7.
-
-### Augeas versions
-
-Augeas Versions           | 0.10.0  | 1.0.0   | 1.1.0   | 1.2.0   |
-:-------------------------|:-------:|:-------:|:-------:|:-------:|
-**PROVIDERS**             |
-nrpe\_command             | **yes** | **yes** | **yes** | **yes** |
+    puppet module install puppet/augeasproviders_nagios
 
 ## Documentation and examples
 
-Type documentation can be generated with `puppet doc -r type` or viewed on the
-[Puppet Forge page](http://forge.puppetlabs.com/voxpupuli/augeasproviders_nagios).
+Type documentation is in [REFERENCE.md](REFERENCE.md) and on the
+[Puppet Forge page](https://forge.puppet.com/modules/puppet/augeasproviders_nagios).
 
 
 ### manage entry
